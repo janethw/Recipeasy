@@ -1,0 +1,1 @@
+This directory will store all the logs for the application. They will not be pushed to the repository

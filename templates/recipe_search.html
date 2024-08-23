@@ -1,0 +1,19 @@
+{% extends "base_template.html" %}
+{% block title %}Recipe Builder{% endblock %}
+{% block head_links %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/recipe.css') }}">
+{% endblock %}
+
+{% block content %}
+    <table class="table">
+        <tr class="table-header"><th>Recipe Name</th><th>URL</th><th></th></tr>
+{% for recipe in recipes %} <!-- basically a for loop 'recipes' is passed in as a named parameter -->
+        <tr class="recipeRow">
+            <td class="select"><a href="/recipe_details/recipe_id:{{ recipe['recipe_id']|e }}">{{ recipe['title']|e }}</a></td>
+            <td class="select"><a href="{{ recipe['url']|e }}" target="_blank">{{ recipe['url']|e }}</a></td>
+            <td><img src="{{ recipe['image_url']|e }}" alt="{{ recipe['title']|e }}"></td>
+        </tr>
+{% endfor %}
+    </table>
+{% endblock %}

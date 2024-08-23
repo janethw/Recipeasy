@@ -1,0 +1,8 @@
+Flask~=3.0.3
+requests~=2.32.3
+mysql-connector-python~=8.4.0
+recipe_scrapers~=14.56.0
+lxml==5.1.0
+pytest~=8.2.1
+beautifulsoup4~=4.12.3
+Werkzeug~=3.0.3

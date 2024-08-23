@@ -1,0 +1,13 @@
+{% extends "base_template.html" %}
+{% block title %}Error{% endblock %}
+{% block head_links %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="error">
+    <h1>Error</h1>
+    {{ error_message|e }}
+</div>
+{% endblock %}

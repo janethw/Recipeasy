@@ -1,0 +1,87 @@
+body {
+	background-color: #F0DAB9;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Arial;
+	font-size: 50px;
+}
+
+/* website banner */
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -1px;
+    max-width: 100%;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    border-radius: 20px 20px 0px 0px;
+}
+
+ /* website name style */
+.banner header {
+    font-size: 2em;
+    font-family: Arial;
+    color: #5CE1E6;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.rounded-pi11 {
+    width: 7%;
+}
+
+
+ /* side navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: #00BF63;
+    font-size: 30px;
+    font-family: Arial;
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: -1px;
+}
+
+#signOut {
+    margin-left: auto; /* push it to the right */
+    width: auto;
+    text-decoration: underline; /* underline the Sign Out link */
+    max-width: none; /* ensure it doesn't get limited by flex property */
+    flex: 0;
+    color: blue;
+    white-space: nowrap;
+}
+
+  /* navigation menu links */
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+}
+
+
+  /* when you hover the mouse over the navigation links, change their color */
+.topnav a:hover {
+   color: #f1f1f1;
+   background-color: #00BF63;
+}
+
+#signOut:hover {
+   color: red;
+   background-color: white;
+}
+
+
+
+  /* style page content */
+.main {
+    padding: 70px;
+    font-family: Arial;
+  }
+

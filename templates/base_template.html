@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title required%}{% endblock %}</title>
+    {% block head_links %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base_template.css') }}">
+    <link rel="shortcut icon"  href="{{ url_for('static', filename='images/recipeze_logo.png') }}">
+</head>
+<body>
+
+<!-- website banner -->
+<div class="banner">
+    <img src="{{ url_for('static', filename='images/recipeze_logo.png') }}" alt="logo" class="rounded-pi11">
+    <header>RECIPEASY</header>
+</div>
+
+  <!-- top navigation -->
+  <div class="topnav">
+    <a href="/homepage">Home</a>
+    <a href="/recipe">Recipe Search</a>
+    <a href="/quiz">Trivia Quiz</a>
+    <a href="/profile">Profile</a>
+    <a id="signOut" href="/logout">Sign Out</a>
+  </div>
+
+  <!-- page content -->
+  <div class="main">
+    {% block content required %}{% endblock %}
+  </div>

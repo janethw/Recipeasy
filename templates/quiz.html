@@ -1,0 +1,39 @@
+{% extends "base_template.html" %}
+{% block title %}Quiz{% endblock %}
+{% block head_links %}
+{{ super() }}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/quiz.css') }}">
+    <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="quizGridContainer">
+    <h1>Welcome To The Cooking Quiz</h1>
+    {% if session_quiz_number == 1 %}
+    <h3>You'll be asked 5 questions - see how much you know</h3>
+    {% elif session_quiz_number == 2 %}
+    <h3>You're doing great - keep going!!</h3>
+    {% elif session_quiz_number == 3 %}
+    <h3>Half-way through - you've got this</h3>
+    {% elif session_quiz_number == 4 %}
+    <h3>Getting near the end now</h3>
+    {% elif session_quiz_number == 5 %}
+    <h3>Last question...</h3>
+    {% endif %}
+    <div class="quiz-question">
+        <p>Question {{ session_quiz_number }} - {{ question }}</p>
+        <div class="options">
+            <form id="quizForm" action="{{ url_for('check_answer') }}" method="post">
+                <input type="hidden" id="selectedAnswer" name="answer" value="">
+                <input type="hidden" id="correctAnswerIDField" name="correct_answer_id" value="{{ correct_answer_id }}">
+                <input type="hidden" id="user_score" name="user_score" value="{{ user_score }}">
+                <button type="button" class="questionOptions" onclick="selectAnswer('{{ answer1 }}')">1. {{ answer1 }}</button>
+                <button type="button" class="questionOptions" onclick="selectAnswer('{{ answer2 }}')">2. {{ answer2 }}</button>
+                <button type="button" class="questionOptions" onclick="selectAnswer('{{ answer3 }}')">3. {{ answer3 }}</button>
+                <button type="button" class="questionOptions" onclick="selectAnswer('{{ answer4 }}')">4. {{ answer4 }}</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

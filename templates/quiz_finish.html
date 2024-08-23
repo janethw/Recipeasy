@@ -1,0 +1,30 @@
+{% extends "base_template.html" %}
+{% block title %}Quiz{% endblock %}
+{% block head_links %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/quiz.css') }}">
+	<script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="quizGridContainer">
+    <h1>🎉🎉🎉</h1>
+    <h1>Congratulations</h1>
+    <h1>🎉🎉🎉</h1>
+    <form action="/quiz/new_quiz" method="POST">
+        <div>
+            <h2>Well done - you've reached the end of the quiz!</h2>
+            <h2>You scored {{ user_score }} out of 5</h2>
+            <input type="hidden" name="user_score" value = "{{ user_score }}">
+        </div>
+        <div>
+            <h3>
+                Here's a joke for you: {{ joke }}
+            </h3>
+        </div>
+        <div>
+            <button type="submit" class="anotherQuiz">Start a new quiz</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base_template.html" %}
+
+{% block title %}{{ username.capitalize() }}'s Profile{% endblock %}
+
+{% block head_links %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/profile.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <div class="profile-header">
+        <img src="{{ url_for('static', filename='images/profile_pic.jpg')}}" alt="Profile Picture" class="profile-picture">
+        <h1>{{ username.capitalize() }}'s Profile</h1>
+    </div>
+    <div class="profile-details">
+        <h2>About Me</h2>
+        <p>{{ user_description }}</p>
+
+        <h2>Account Details</h2>
+        <p>Username: {{ username }}</p>
+        <p>Email: {{ email }}</p>
+    </div>
+</div>
+{% endblock %}

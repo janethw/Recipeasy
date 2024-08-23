@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title required%}{% endblock %}</title>
+    {% block head_links %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/recipeze_logo.png') }}">
+</head>
+<body>
+
+<!-- Website banner -->
+<div class="banner">
+    <header>RECIPEASY</header>
+</div>
+
+  <!-- Top navigation -->
+  <div class="topnav">
+    <a href="/">Login</a>
+    <a href="/register">Register</a>
+  </div>
+
+  <!-- Page content -->
+  <div class="main">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

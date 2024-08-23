@@ -1,0 +1,28 @@
+{% extends "base_template.html" %} <!-- use this parent template -->
+{% block title %}Recipe Builder{% endblock %} <!-- populates the title block from parent -->
+{% block head_links %}
+{{ super() }} <!-- use the code that is in the parent block -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/recipe.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="recipeGridContainer">
+    <div id="recipeGridItem1"></div>
+    <div id="recipeGridItem2">Welcome to the Recipe Builder</div>
+    <div id="recipeGridItem3"></div>
+    <div id="recipeGridItem4"></div>
+    <div id="recipeGridItem5" class="recipeHomePageSelection">
+        <h1>Please enter up to 5 ingredients: </h1>
+        <!-- pressing submit here triggers the /get_recipe route-->
+        <form id="formGetIngredients" action="/get_recipe" method="GET">
+            <input type="text" name="ingredient1" placeholder="Ingredient 1" required>
+            <input type="text" name="ingredient2" placeholder="Ingredient 2">
+            <input type="text" name="ingredient3" placeholder="Ingredient 3">
+            <input type="text" name="ingredient4" placeholder="Ingredient 4">
+            <input type="text" name="ingredient5" placeholder="Ingredient 5">
+            <button type="submit">Search for recipes</button>
+        </form>
+    </div>
+    <div id="recipeGridItem6"></div>
+</div>
+{% endblock %}

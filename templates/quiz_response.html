@@ -1,0 +1,27 @@
+{% extends "base_template.html" %}
+{% block title %}Quiz{% endblock %}
+{% block head_links %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/quiz.css') }}">
+    <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="quizGridContainer">
+    <h1>How did you do?</h1>
+    <form action="/quiz/next_question" method="POST">
+        <div>
+            {% if question_feedback == "Correct!" %}
+                <h2 id="answer_feedback">Congratulations! Your answer of {{ submitted_answer }} was correct!</h2>
+            {% else %}
+                <!-- duplicate id will not occur as if statement -->
+                <h2 id="answer_feedback">Oops! Your answer of {{ submitted_answer }} was incorrect.</h2>
+            {% endif %}
+            <h2>Your current score is: {{ user_score }}</h2>
+        </div>
+        <div>
+            <button type="submit" class="nextQuestionButton">Next Question</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

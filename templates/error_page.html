@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unexpected Error</title>
+    <link rel="shortcut icon"  href="{{ url_for('static', filename='images/recipeze_logo.png') }}">
+</head>
+<body>
+<div class="error">
+    <h1>An unexpected error has occurred</h1>
+    {{ error_message|e }}
+</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+
+h1 {
+    color: black;
+    font-size: 50px;
+}
+#gridItem5, #recipeGridItem5 #formGetIngredients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+/* stacks the buttons in a vertical column */
+	flex-direction: column;
+}
+
+.recipeGridContainer {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 70px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    justify-content: center;
+    align-items: center;
+    max-width: 75%;
+    margin: 0 auto;
+    font-family: Arial;
+}
+
+#recipeGridItem2 {
+    color: #ff6347;
+    font-size: 70px;
+    font-family: Arial;
+    font-weight: bolder;
+}
+
+#formGetIngredients input[type="text"] {
+    width: 30%;
+    font-size: 30px;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+#formGetIngredients button {
+    background-color: #5CE1E6;
+    padding: 10px 50px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+#formGetIngredients button:hover {
+    background-color: #00bfff;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate; /* separate borders for rows */
+    border-spacing: 0 20px;
+}
+
+.table td {
+    border: 1px solid rgba(204, 204, 204, 0.3); /* add border to cells */
+    padding: 10px; /* add padding to cells */
+    text-align: left; /* align text to the left */
+}
+
+.table tr {
+    margin-bottom: 10px; /* add margin to separate rows */
+}
+
+.table td img {
+    max-width: 200px; /* adjust the max width of images */
+    height: auto; /* maintain aspect ratio */
+}
+
+.table tbody tr.recipeRow {
+    background-color: white; /* background color for rows */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* add shadow to rows */
+    font-size: 35px;
+    border-radius: 20px;
+
+}
+
+.table tr.table-header {
+    font-size: 60px;
+    font-family: Arial;
+    text-align: center;
+    background-color: #FFCC00;
+}
+
+.table th {
+    text-align: left; /* ensure text is aligned left in headers */
+    padding: 15px; /* add padding to headers */
+}
+
+.table tbody tr.recipeRow td:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.table tbody tr.recipeRow td:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.recipeRow .select a:hover {
+    color: red;
+}
+
+.recipeTitle {
+    font-size: 60px;
+    font-family: Arial;
+    text-align: center;
+    background-color: #FFCC00;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.recipe {
+    background-color: #F2F2ED;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.instructions {
+    margin: 50px;
+    font-size: 30px;
+}
+
+.ingredients {
+    margin: 50px;
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+h3 {
+    font-size: 60px;
+}
+
+p {
+    font-size: 40px;
+}
+
+p a:hover {
+    color: red;
+}
+
+.image {
+    border: 5px solid black;
+    display: block;
+    margin-left: auto;
+    width: 30%;
+}

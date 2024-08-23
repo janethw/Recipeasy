@@ -1,0 +1,35 @@
+{% extends "base_template.html" %}
+{% block title %}Recipeasy{% endblock %}
+{% block head_links %}
+{{ super() }}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/homepage.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="gridContainer">
+	<div id="gridItem1">
+		<h2>Welcome to the cooking app</h2>
+	</div>
+	<div id="gridItem2">
+    </div>
+	<div id="gridItem3">
+		<div class="block">
+			<h3>Features</h3>
+			<p>Feel free to explore our app's amazing features, from our recipe search to the children's cooking quiz,
+				that make cooking easier and more fun!</p>
+		</div>
+		<div class="block">
+			<h3>About Us</h3>
+			<p>Through this app, we strive to help families get their children more active in the kitchen in a safe
+				and fun way!</p>
+			<p>Our exciting cooking trivia quiz provides an educational aspect to the app,
+				and users have access to recipes using ingredients already in their fridge.</p>
+			<p>Happy Cooking!</p>
+		</div>
+	</div>
+	<div id="gridItem4">
+		<img src="{{ url_for('static', filename='images/recipeze_logo.png') }}" alt="logo" class="recipeasyLogo">
+	</div>
+	<div id="gridItem6"></div>
+</div>
+{% endblock %}

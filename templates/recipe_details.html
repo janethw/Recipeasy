@@ -1,0 +1,31 @@
+{% extends "base_template.html" %}
+{% block title %}Recipe Details{% endblock %}
+{% block head_links %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/recipe.css') }}">
+{% endblock %}
+
+{% block content %}
+<div>
+    <h1 class="recipeTitle">{{ recipe['title']| e}}</h1>
+    <div class="recipe">
+        <img src="{{ recipe['image_url']|e }}" alt="{{ recipe['title']|e }}" class="image">
+        <h3>Recipe Link</h3>
+        <p><a href="{{ recipe['url']|e }}" target="_blank">{{ recipe['url']|e }}</a></p>
+        <h2>Ingredients</h2>
+        <ul>
+            {% for ingredient in ingredients %}
+        <li class="ingredients" id="{{ ingredients[ingredient]['ingredient_id']|e }}">
+            {{ ingredients[ingredient]['quantity']|e }} {{ingredients[ingredient]['measure']|e }} - {{ ingredient|e }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Instructions</h2>
+        <ol>
+            {% for instruction in instructions %}
+        <li class="instructions">{{ instruction|e }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>
+
+{% endblock %}

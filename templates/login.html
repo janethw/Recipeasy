@@ -1,0 +1,29 @@
+{% extends "login_base_template.html" %} <!-- use this parent template -->
+{% block title %}Recipeasy Login{% endblock %} <!-- populates the title block from parent -->
+{% block head_links %}
+{{ super() }} <!-- use the code that is in the parent block -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2> User Login </h2>
+    <img src="{{ url_for('static', filename='images/recipeze_logo.png') }}" alt="logo" class="recipeasyLogo">
+    <h4>Please log in to your account</h4>
+    <form action="/login" method="POST">
+
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    {% if error is defined and error %}
+        <div><strong>{{ error }}</strong></div>
+    {% endif %}
+</div>
+{% endblock %}

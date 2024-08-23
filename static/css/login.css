@@ -1,0 +1,140 @@
+/* define color variables updated */
+:root {
+    beige: #F0DAB9;
+    light-gray: #F2F2ED;
+    cyan: #5CE1E6;
+    green: #00BF63;
+    yellow: #FFCC00;
+    black: #000000;
+    white: #FFFFFF;
+    hover-color: #7a7a7a;
+}
+
+body {
+
+	background-color: #F0DAB9;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Arial, sans serif;
+}
+
+/* website banner */
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 97.9%;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    border-radius: 20px 20px 0px 0px;
+
+ }
+
+ /* website name style */
+.banner header {
+    font-size: 50px;
+    font-family: Arial;
+    text-align: center;
+    flex-grow: 1;
+    color: #5CE1E6;
+ }
+
+ /* side navigation menu */
+ .topnav {
+    overflow: hidden;
+    background-color: #00BF63;
+    font-size: 30px;
+    font-family: Arial;
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    justify-content: left;
+  }
+
+
+  /* navigation menu links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+  }
+
+  /* when you mouse over the navigation links, change their color */
+  .topnav a:hover {
+    color: #f1f1f1;
+    background-color: #00BF63;
+  }
+
+
+  /* style page content */
+.main {
+    margin-left: 0px; /* same as the width of the sidebar + 10px */
+    padding: 40px;
+    font-family: Arial;
+  }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    height: 80%;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    text-align: center;
+    padding: 70px 0px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 60%;
+
+    margin: 0 auto;
+}
+
+form input {
+    padding: 10px;
+    font-size: 16px;
+
+    border: 1px solid rgba(204, 204, 204, 0.5);
+
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00BF63;
+    color: white;
+    cursor: pointer;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin-top: 25px;
+}
+
+form button:hover {
+    background-color: gray;
+}
+
+.recipeasyLogo {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
